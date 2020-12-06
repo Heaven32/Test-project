@@ -1,0 +1,59 @@
+
+.Currency h1 {
+    margin: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #474747;
+}
+
+.Currency h2 {
+    margin: 0;
+    padding-top: 22px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #474747;
+}
+
+.Currency__input-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.Currency__input-wrap label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 140%;
+    color: #5A5F67;
+    margin: 0 0 8px;
+}
+
+.Currency__input-wrap input {
+    display: none;
+}
+
+.Currency__radio {
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    border: 1.2px solid #545454;
+    margin: 0 8px 0 0;
+}
+
+.Currency__input-wrap input:checked + .Currency__radio {
+    background: #FFFFFF;
+    border: 4px solid #545454;
+    box-sizing: border-box;
+}

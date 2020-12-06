@@ -1,0 +1,16 @@
+.Form {
+    width: 532px;
+    height: 570px;
+    background: #FFFFFF;;
+    text-align: left;
+    padding: 30px 42px;
+    box-shadow: 0px 1px 8px rgba(154, 156, 174, 0.06);
+    border-radius: 5px;
+}
+
+.Form__divider {
+    width: 100%;
+    height: 1px;
+    background: gainsboro;
+    margin: 46px 0 56px 0;
+}

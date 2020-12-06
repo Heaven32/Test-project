@@ -1,9 +1,11 @@
 import React from 'react';
-import './style.css'
+import './style.scss'
 
 const PopUp = ({popUpState, setPopUpState}) => {
+
   return (
     <div className={`PopUp${popUpState ? '_show' : ''}`}>
+
       <div className="PopUp__block">
         <div className="Wrap__svg">
           <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">

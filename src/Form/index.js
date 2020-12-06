@@ -1,7 +1,7 @@
 import React from 'react';
 import Currency from '../Currency'
 import BankSync from '../BankSync'
-import './style.css'
+import './style.scss'
 
 const Form = () => {
   return (

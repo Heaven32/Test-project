@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './style.css'
+import './style.scss'
 
 const Index = () => {
   const [isOpen, setOpen] = useState(false);

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import PopUp from '../PopUp';
-import './style.css';
+import './style.scss';
 
 const BankSync = () => {
   const [popUpState, setPopUpState] = useState(false)
-  const [isOpen, setOpen] = useState(false);
+  const [showBank, setShowBank] = useState(false);
   return (
     <div className="Bank-sync">
       <h1>Синхронизация с банками</h1>
-      <div className={`Wrapper__section${isOpen ? '_open': ''}`}>
+      <div className={`Wrapper__section${showBank ? '_open' : ''}`}>
         <div className="Wrap__block_first">
           <div>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,17 +20,23 @@ const BankSync = () => {
             <div>Синхронизация: <span className="Date__sync">28.10.2020</span></div>
           </div>
         </div>
-        
         <div className="Wrap__block_second">
           <svg className="spinner" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.64198 1.95533C3.85169 0.907108 5.3993 0.331102 6.99998 0.333335C10.682 0.333335 13.6666 3.318 13.6666 7C13.6666 8.424 13.22 9.744 12.46 10.8267L10.3333 7H12.3333C12.3334 5.95442 12.0261 4.93187 11.4498 4.05951C10.8734 3.18714 10.0533 2.50344 9.09143 2.09342C8.1296 1.68339 7.06846 1.56514 6.03995 1.75335C5.01145 1.94156 4.06095 2.42793 3.30665 3.152L2.64198 1.95533ZM11.358 12.0447C10.1483 13.0929 8.60066 13.6689 6.99998 13.6667C3.31798 13.6667 0.333313 10.682 0.333313 7C0.333313 5.576 0.77998 4.256 1.53998 3.17333L3.66665 7H1.66665C1.66656 8.04559 1.97381 9.06813 2.5502 9.9405C3.12659 10.8129 3.94669 11.4966 4.90853 11.9066C5.87036 12.3166 6.9315 12.4349 7.96001 12.2467C8.98851 12.0584 9.93901 11.5721 10.6933 10.848L11.358 12.0447Z" fill="#A7AFBC"/>
           </svg>
-          <div className="Reject__btn" onClick={()=>{setOpen(false)}}>Отклонить</div>
+          <div className="Reject__btn" onClick={()=>{setShowBank(false)}}>Отклонить</div>
         </div>
       </div>
-      <div onClick={()=> {setPopUpState(true); setOpen(!isOpen)}
-      } className="Add__btn" >Добавить новую синхронизацию</div>
-      <PopUp popUpState={popUpState} setPopUpState={setPopUpState}/>
+      <div
+        onClick={()=> {
+          setPopUpState(true);
+          setShowBank(true);
+        }}
+        className="Add__btn"
+      >
+        Добавить новую синхронизацию
+      </div>
+      <PopUp popUpState={popUpState} setPopUpState={setPopUpState} />
     </div>
   );
 };
